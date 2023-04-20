@@ -1,5 +1,6 @@
-The csv file from Kaggle is 50 MB and cannot be included in git hub, but it can be accessed from the following link:
+Attached is the excel file containing the data from the Bureau of Economic Analysis that we cleaned, condensed, and pivoted. In addition, we added a dummy variable for a recession according to the following definition:
 
-https://www.kaggle.com/datasets/shivamb/real-or-fake-fake-jobposting-prediction
+0. No recession in following year
+1. Recession in following year 
 
-We recommend reading the file as a csv into RStudio using the read.csv() function after downloading it onto your computer.
+[Master Data.xlsx](https://github.com/hjl6eqe/DS_4002_Project1/files/11286331/Master.Data.xlsx)
