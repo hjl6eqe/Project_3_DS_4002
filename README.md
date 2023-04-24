@@ -45,7 +45,7 @@ While these datasets contained many variables, we narrowed our factors to predic
 9. Disposable personal income
 
 ## FIGURES
-Our figures include a plot of the different variables over time...TO BE UPDATED
+Our figures include a plot of the different variables over time. In addition, we have ACF and PACF plots illustrate how we determined our parameters
 
 ## REFERENCES
 Bureau of Economic Analysis, “Percent Change From Preceding Period in Real Gross Domestic Product,” Updated March 30, 2023. [Online]. Available:
