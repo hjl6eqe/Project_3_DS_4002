@@ -1,0 +1,79 @@
+---
+title: "Auto ARIMA"
+author: "Peter Layne (RPL2WA)"
+date: "4/18/2023"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#install.packages("forecast")
+library(dplyr)
+library(readr)
+library(readxl)
+library(forecast)
+#install.packages("vars")
+library(vars)
+#install.packages("ggforitfy")
+#library(ggfortify )
+library(Metrics)
+library(tseries)
+```
+
+```{r}
+econdata <- read.csv('/Users/peterlayne/Downloads/Master Data Flip.xlsx - Sheet2.csv', row.names = "Year")
+```
+
+```{r}
+data <- econdata
+
+train <- data[1:58, ]
+tune <- data[58:65, ]
+test <- data[66:75, ]
+#xreg <- as.matrix(xregdata[-75, ])
+pselect <- VARselect(econdata)
+
+model <- VAR(train, p = 4)
+
+
+```
+
+```{r}
+library(Metrics)
+tune_try <- predict(model, n.ahead = length(tune), newdata = tune)
+
+y <- as.data.frame(tune[(nrow(tune) - 7):nrow(tune),])
+
+
+rmse(tune_try$fcst$Recession, y$Recession)
+mae(tune_try$fcst$Recession, y$Recession)
+
+```
+
+
+
+```{r}
+gdpforecast <- predict(model, n.ahead = 1, newdata = tail(test, 4))$fcst
+#gdpforecast <- as.data.frame(gdpforecast)
+
+print(gdpforecast[10])
+
+
+```
+
+
+```{r}
+x <- ts(econdata)
+adf.test(econdata$Recession)
+
+
+
+
+
+```
+
