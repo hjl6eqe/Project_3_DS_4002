@@ -4,11 +4,11 @@
 
 ## SRC
 ### Installing / Building Code
-The primary reference code for preparing our Auto-ARIMA model can be found here: 
-https://www.section.io/engineering-education/multivariate-time-series-using-auto-arima/
+Reading the following article on Vector Autoregression helped inspire our model and code:
+https://towardsdatascience.com/a-deep-dive-on-vector-autoregression-in-r-58767ebb3f06
 
 ### Usage of Code
-To determine the parameters for our Auto-ARIMA model, we used Auto Correlation Functions (ACF) and Partial Auto Correlation Functions (PACF). After deteriming them, we applied them to our Auto-ARIMA function in Python.
+To determine the parameters for our Auto-ARIMA model (our original idea), we used Auto Correlation Functions (ACF) and Partial Auto Correlation Functions (PACF). After deteriming them, we applied them to our Auto-ARIMA function in Python.
 
 ## DATA
 ### Data Dictionary
@@ -67,3 +67,5 @@ Bureau of Economic Analysis, “Percent Change From Preceding Period in Real Pri
 https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDMsM10sImRhdGEiOltbImNhdGVnb3JpZXMiLCJTdXJ2ZXkiXSxbIk5JUEFfVGFibGVfTGlzdCIsIjE0MSJdLFsiRmlyc3RfWWVhciIsIjE5NDgiXSxbIkxhc3RfWWVhciIsIjIwMjIiXSxbIlNjYWxlIiwiMCJdLFsiU2VyaWVzIiwiQSJdXX0=
 
 J. Omina, “Multivariate Time Series Using Auto ARIMA,” May 24, 2022. [Online]. Available: https://www.section.io/engineering-education/multivariate-time-series-using-auto-arima/
+
+J. Eloriaga, "A Deep Dive on Vector Autoregression in R," June 18, 2020. [Online]. Available: https://towardsdatascience.com/a-deep-dive-on-vector-autoregression-in-r-58767ebb3f06
